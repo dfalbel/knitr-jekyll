@@ -42,14 +42,14 @@ print(Line, tag = "chart")
 {% endhighlight %}
 
 <!-- LineChart generated in R 3.2.0 by googleVis 0.5.8 package -->
-<!-- Wed May 20 20:08:07 2015 -->
+<!-- Wed May 20 20:09:08 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataLineChartID1f231f6465a1 () {
+function gvisDataLineChartID203753c6887b () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -77,13 +77,13 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartLineChartID1f231f6465a1() {
-var data = gvisDataLineChartID1f231f6465a1();
+function drawChartLineChartID203753c6887b() {
+var data = gvisDataLineChartID203753c6887b();
 var options = {};
 options["allowHtml"] = true;
 
     var chart = new google.visualization.LineChart(
-    document.getElementById('LineChartID1f231f6465a1')
+    document.getElementById('LineChartID203753c6887b')
     );
     chart.draw(data,options);
     
@@ -107,9 +107,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartLineChartID1f231f6465a1);
+callbacks.push(drawChartLineChartID203753c6887b);
 })();
-function displayChartLineChartID1f231f6465a1() {
+function displayChartLineChartID203753c6887b() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -133,11 +133,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID1f231f6465a1"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID203753c6887b"></script>
  
 <!-- divChart -->
   
-<div id="LineChartID1f231f6465a1" 
+<div id="LineChartID203753c6887b" 
   style="width: 500; height: automatic;">
 </div>
 
@@ -167,9 +167,9 @@ k <- tmp %>%
 k
 {% endhighlight %}
 
-<!--html_preserve--><div id="mjs-fc0029d858abb3a36a68b6e21c1448" class="metricsgraphics" style="width:504px;height:504px;"></div>
-<div id="mjs-fc0029d858abb3a36a68b6e21c1448-legend" class="metricsgraphics-legend"></div>
-<script type="application/json" data-for="mjs-fc0029d858abb3a36a68b6e21c1448">{"x":{"data":{"year":[1790,1800,1810,1820,1830,1840,1850,1860,1870,1880,1890,1900,1910,1920,1930,1940,1950,1960,1970],"uspop":[3.93,5.31,7.24,9.64,12.9,17.1,23.2,31.4,39.8,50.2,62.9,76,92,105.7,122.8,131.7,151.3,179.3,203.2]},"x_axis":true,"y_axis":true,"baseline_accessor":null,"predictor_accessor":null,"show_confidence_band":null,"chart_type":"line","xax_format":"plain","x_label":null,"y_label":null,"markers":[{"year":1850,"label":"Something Wonderful"}],"baselines":[{"value":150,"label":"Something Awful"}],"linked":false,"title":null,"description":null,"left":80,"right":10,"bottom":60,"buffer":8,"y_scale_type":"linear","yax_count":5,"xax_count":6,"x_rug":false,"y_rug":false,"area":false,"missing_is_zero":false,"size_accessor":null,"color_accessor":null,"color_type":"number","color_range":["blue","red"],"size_range":[1,5],"bar_height":20,"min_x":null,"max_x":null,"min_y":null,"max_y":null,"bar_margin":1,"binned":false,"bins":null,"least_squares":false,"interpolate":"cardinal","decimals":2,"show_rollover_text":true,"x_accessor":"year","y_accessor":"uspop","multi_line":null,"geom":"line","legend":null,"legend_target":null,"y_extended_ticks":false,"x_extended_ticks":false,"target":"#mjs-fc0029d858abb3a36a68b6e21c1448","full_width":true,"full_height":true,"animate_on_load":false},"evals":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="mjs-5c79f35030f396429ba2f6d1e896d1" class="metricsgraphics" style="width:504px;height:504px;"></div>
+<div id="mjs-5c79f35030f396429ba2f6d1e896d1-legend" class="metricsgraphics-legend"></div>
+<script type="application/json" data-for="mjs-5c79f35030f396429ba2f6d1e896d1">{"x":{"data":{"year":[1790,1800,1810,1820,1830,1840,1850,1860,1870,1880,1890,1900,1910,1920,1930,1940,1950,1960,1970],"uspop":[3.93,5.31,7.24,9.64,12.9,17.1,23.2,31.4,39.8,50.2,62.9,76,92,105.7,122.8,131.7,151.3,179.3,203.2]},"x_axis":true,"y_axis":true,"baseline_accessor":null,"predictor_accessor":null,"show_confidence_band":null,"chart_type":"line","xax_format":"plain","x_label":null,"y_label":null,"markers":[{"year":1850,"label":"Something Wonderful"}],"baselines":[{"value":150,"label":"Something Awful"}],"linked":false,"title":null,"description":null,"left":80,"right":10,"bottom":60,"buffer":8,"y_scale_type":"linear","yax_count":5,"xax_count":6,"x_rug":false,"y_rug":false,"area":false,"missing_is_zero":false,"size_accessor":null,"color_accessor":null,"color_type":"number","color_range":["blue","red"],"size_range":[1,5],"bar_height":20,"min_x":null,"max_x":null,"min_y":null,"max_y":null,"bar_margin":1,"binned":false,"bins":null,"least_squares":false,"interpolate":"cardinal","decimals":2,"show_rollover_text":true,"x_accessor":"year","y_accessor":"uspop","multi_line":null,"geom":"line","legend":null,"legend_target":null,"y_extended_ticks":false,"x_extended_ticks":false,"target":"#mjs-5c79f35030f396429ba2f6d1e896d1","full_width":true,"full_height":true,"animate_on_load":false},"evals":[]}</script><!--/html_preserve-->
 
 
 
