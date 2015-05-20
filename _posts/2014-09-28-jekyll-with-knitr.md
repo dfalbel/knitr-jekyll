@@ -33,29 +33,113 @@ library(googleVis)
 
 
 {% highlight r %}
+library(methods)
 df=data.frame(country=c("US", "GB", "BR"), 
               val1=c(10,13,14), 
               val2=c(23,12,32))
 Line <- gvisLineChart(df)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in FUN(X[[i]], ...): could not find function "is"
-{% endhighlight %}
-
-
-
-{% highlight r %}
 print(Line, tag = "chart")
 {% endhighlight %}
 
+<!-- LineChart generated in R 3.2.0 by googleVis 0.5.8 package -->
+<!-- Wed May 20 20:08:07 2015 -->
 
 
-{% highlight text %}
-## Error in print(Line, tag = "chart"): object 'Line' not found
-{% endhighlight %}
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataLineChartID1f231f6465a1 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "US",
+10,
+23 
+],
+[
+ "GB",
+13,
+12 
+],
+[
+ "BR",
+14,
+32 
+] 
+];
+data.addColumn('string','country');
+data.addColumn('number','val1');
+data.addColumn('number','val2');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartLineChartID1f231f6465a1() {
+var data = gvisDataLineChartID1f231f6465a1();
+var options = {};
+options["allowHtml"] = true;
+
+    var chart = new google.visualization.LineChart(
+    document.getElementById('LineChartID1f231f6465a1')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartLineChartID1f231f6465a1);
+})();
+function displayChartLineChartID1f231f6465a1() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID1f231f6465a1"></script>
+ 
+<!-- divChart -->
+  
+<div id="LineChartID1f231f6465a1" 
+  style="width: 500; height: automatic;">
+</div>
 
 
 {% highlight r %}
@@ -74,16 +158,18 @@ library(metricsgraphics)
 {% highlight r %}
 tmp <- data.frame(year=seq(1790, 1970, 10), uspop=as.numeric(uspop))
 
-tmp %>%
+k <- tmp %>%
   mjs_plot(x=year, y=uspop) %>%
   mjs_line() %>%
   mjs_add_marker(1850, "Something Wonderful") %>%
   mjs_add_baseline(150, "Something Awful")  
+
+k
 {% endhighlight %}
 
-<!--html_preserve--><div id="mjs-a22ffad8011e0115d2ca9f4602168a" class="metricsgraphics" style="width:504px;height:504px;"></div>
-<div id="mjs-a22ffad8011e0115d2ca9f4602168a-legend" class="metricsgraphics-legend"></div>
-<script type="application/json" data-for="mjs-a22ffad8011e0115d2ca9f4602168a">{"x":{"data":{"year":[1790,1800,1810,1820,1830,1840,1850,1860,1870,1880,1890,1900,1910,1920,1930,1940,1950,1960,1970],"uspop":[3.93,5.31,7.24,9.64,12.9,17.1,23.2,31.4,39.8,50.2,62.9,76,92,105.7,122.8,131.7,151.3,179.3,203.2]},"x_axis":true,"y_axis":true,"baseline_accessor":null,"predictor_accessor":null,"show_confidence_band":null,"chart_type":"line","xax_format":"plain","x_label":null,"y_label":null,"markers":[{"year":1850,"label":"Something Wonderful"}],"baselines":[{"value":150,"label":"Something Awful"}],"linked":false,"title":null,"description":null,"left":80,"right":10,"bottom":60,"buffer":8,"y_scale_type":"linear","yax_count":5,"xax_count":6,"x_rug":false,"y_rug":false,"area":false,"missing_is_zero":false,"size_accessor":null,"color_accessor":null,"color_type":"number","color_range":["blue","red"],"size_range":[1,5],"bar_height":20,"min_x":null,"max_x":null,"min_y":null,"max_y":null,"bar_margin":1,"binned":false,"bins":null,"least_squares":false,"interpolate":"cardinal","decimals":2,"show_rollover_text":true,"x_accessor":"year","y_accessor":"uspop","multi_line":null,"geom":"line","legend":null,"legend_target":null,"y_extended_ticks":false,"x_extended_ticks":false,"target":"#mjs-a22ffad8011e0115d2ca9f4602168a","full_width":true,"full_height":true,"animate_on_load":false},"evals":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="mjs-fc0029d858abb3a36a68b6e21c1448" class="metricsgraphics" style="width:504px;height:504px;"></div>
+<div id="mjs-fc0029d858abb3a36a68b6e21c1448-legend" class="metricsgraphics-legend"></div>
+<script type="application/json" data-for="mjs-fc0029d858abb3a36a68b6e21c1448">{"x":{"data":{"year":[1790,1800,1810,1820,1830,1840,1850,1860,1870,1880,1890,1900,1910,1920,1930,1940,1950,1960,1970],"uspop":[3.93,5.31,7.24,9.64,12.9,17.1,23.2,31.4,39.8,50.2,62.9,76,92,105.7,122.8,131.7,151.3,179.3,203.2]},"x_axis":true,"y_axis":true,"baseline_accessor":null,"predictor_accessor":null,"show_confidence_band":null,"chart_type":"line","xax_format":"plain","x_label":null,"y_label":null,"markers":[{"year":1850,"label":"Something Wonderful"}],"baselines":[{"value":150,"label":"Something Awful"}],"linked":false,"title":null,"description":null,"left":80,"right":10,"bottom":60,"buffer":8,"y_scale_type":"linear","yax_count":5,"xax_count":6,"x_rug":false,"y_rug":false,"area":false,"missing_is_zero":false,"size_accessor":null,"color_accessor":null,"color_type":"number","color_range":["blue","red"],"size_range":[1,5],"bar_height":20,"min_x":null,"max_x":null,"min_y":null,"max_y":null,"bar_margin":1,"binned":false,"bins":null,"least_squares":false,"interpolate":"cardinal","decimals":2,"show_rollover_text":true,"x_accessor":"year","y_accessor":"uspop","multi_line":null,"geom":"line","legend":null,"legend_target":null,"y_extended_ticks":false,"x_extended_ticks":false,"target":"#mjs-fc0029d858abb3a36a68b6e21c1448","full_width":true,"full_height":true,"animate_on_load":false},"evals":[]}</script><!--/html_preserve-->
 
 
 
@@ -107,7 +193,8 @@ sessionInfo()
 ## [11] LC_MEASUREMENT=pt_BR.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  base     
+## [1] methods   stats     graphics  grDevices utils     datasets 
+## [7] base     
 ## 
 ## other attached packages:
 ## [1] metricsgraphics_0.7.5 htmltools_0.2.6       htmlwidgets_0.4      
@@ -118,6 +205,6 @@ sessionInfo()
 ##  [4] formatR_1.2      magrittr_1.5     evaluate_0.7    
 ##  [7] rstudioapi_0.3.1 RJSONIO_1.3-0    tools_3.2.0     
 ## [10] servr_0.2        stringr_0.6.2    httpuv_1.3.2    
-## [13] yaml_2.1.13      knitr_1.10       methods_3.2.0
+## [13] yaml_2.1.13      knitr_1.10
 {% endhighlight %}
 

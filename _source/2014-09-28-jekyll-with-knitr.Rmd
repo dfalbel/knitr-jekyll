@@ -7,6 +7,7 @@ tags: [knitr, servr, httpuv, websocket]
 
 ```{r, results='asis'}
 library(googleVis)
+library(methods)
 df=data.frame(country=c("US", "GB", "BR"), 
               val1=c(10,13,14), 
               val2=c(23,12,32))
@@ -14,15 +15,17 @@ Line <- gvisLineChart(df)
 print(Line, tag = "chart")
 ```
 
-```{r}
+```{r, results='asis'}
 library(metricsgraphics)
 tmp <- data.frame(year=seq(1790, 1970, 10), uspop=as.numeric(uspop))
 
-tmp %>%
+k <- tmp %>%
   mjs_plot(x=year, y=uspop) %>%
   mjs_line() %>%
   mjs_add_marker(1850, "Something Wonderful") %>%
   mjs_add_baseline(150, "Something Awful")  
+
+k
 ```
 
 
